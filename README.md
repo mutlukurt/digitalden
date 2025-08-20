@@ -2,6 +2,12 @@
 
 A modern, full-stack digital marketplace platform built with React and Python, designed for creators to sell digital products and customers to discover premium digital assets.
 
+## 🌐 Live Demo
+
+**🚀 [View Live Site](https://mutlukurt.github.io/digitalden/)**
+
+**📱 Production URL**: `https://mutlukurt.github.io/digitalden/`
+
 ## 🌟 Features
 
 - **Digital Marketplace**: Browse and purchase UI kits, templates, icons, and digital assets
@@ -78,9 +84,7 @@ digitalden/
 └── README.md               # This file
 ```
 
-## 🌐 Live Demo
 
-**Production Site**: [https://mutlukurt.github.io/digitalden/](https://mutlukurt.github.io/digitalden/)
 
 ## 📱 Pages & Features
 
