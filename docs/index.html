@@ -1,15 +1,27 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="theme-color" content="#000000"/><meta name="description" content="A product of emergent.sh"/><title>Emergent | Fullstack App</title><script defer="defer" src="/digitalden/static/js/main.edbab09d.js"></script><link href="/digitalden/static/css/main.50f9ebe1.css" rel="stylesheet"></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"></div><script>// SPA routing fix for GitHub Pages
+<!doctype html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="theme-color" content="#000000"/><meta name="description" content="A product of emergent.sh"/><title>Emergent | Fullstack App</title><script defer="defer" src="/digitalden/static/js/main.edbab09d.js"></script><link href="/digitalden/static/css/main.50f9ebe1.css" rel="stylesheet"></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"></div><script>// SPA routing fix for GitHub Pages - Immediate redirect
 (function() {
-    // GitHub Pages'te SPA routing için URL düzeltmesi
+    // GitHub Pages'te SPA routing için anında yönlendirme
     var path = window.location.pathname;
     
-    // Eğer /digitalden/ ile başlamıyorsa, düzelt
+    // Eğer /digitalden/ ile başlamıyorsa, hemen düzelt
     if (!path.startsWith('/digitalden/')) {
         var newPath = '/digitalden/' + path.replace('/digitalden', '');
         if (newPath === '/digitalden/') {
             newPath = '/digitalden/';
         }
+        
+        // Hash routing için hash'i koru
+        if (window.location.hash) {
+            newPath += window.location.hash;
+        }
+        
+        // Hemen URL'yi düzelt
         window.history.replaceState(null, null, newPath);
+        
+        // Eğer tamamen farklı bir path'deyse, sayfayı yenile
+        if (path !== '/digitalden/' && path !== '/digitalden') {
+            window.location.reload();
+        }
     }
     
     // Hash routing için hash'i koru

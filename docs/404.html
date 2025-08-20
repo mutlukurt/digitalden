@@ -3,49 +3,26 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>DigitalDen - Redirecting...</title>
+    <title>DigitalDen</title>
     <style>
         body {
             margin: 0;
             padding: 0;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            color: white;
+            background: transparent;
+            overflow: hidden;
         }
-        .loading {
-            text-align: center;
-        }
-        .spinner {
-            border: 4px solid rgba(255,255,255,0.3);
-            border-radius: 50%;
-            border-top: 4px solid white;
-            width: 50px;
-            height: 50px;
-            animation: spin 1s linear infinite;
-            margin: 0 auto 20px;
-        }
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+        .invisible {
+            opacity: 0;
+            visibility: hidden;
         }
     </style>
 </head>
-<body>
-    <div class="loading">
-        <div class="spinner"></div>
-        <h2>Ana sayfaya yönlendiriliyor...</h2>
-    </div>
-
+<body class="invisible">
     <script>
-        // Hemen ana sayfaya yönlendir
+        // Hemen ana sayfaya yönlendir - hiçbir şey gösterme
         (function() {
             // Mevcut URL'yi al
             var currentPath = window.location.pathname;
-            var currentSearch = window.location.search;
             var currentHash = window.location.hash;
             
             // Ana sayfa URL'si
@@ -57,21 +34,20 @@
                 return;
             }
             
-            // Eğer farklı bir path'deyse, ana sayfaya yönlendir
             // Hash routing için hash'i koru
             var targetUrl = homeUrl;
             if (currentHash) {
                 targetUrl += currentHash;
             }
             
-            // Hemen yönlendir
+            // Hemen yönlendir - hiçbir loading ekranı gösterme
             window.location.replace(targetUrl);
         })();
         
-        // Fallback: 3 saniye sonra zorla yönlendir
+        // Fallback: 100ms sonra zorla yönlendir
         setTimeout(function() {
             window.location.replace('/digitalden/');
-        }, 3000);
+        }, 100);
     </script>
 </body>
 </html>
