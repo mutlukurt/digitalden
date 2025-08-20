@@ -35,7 +35,7 @@ const CreatorProfilePage = () => {
   const creator = creators.find(c => c.handle === handle);
   
   if (!creator) {
-    return <Navigate to="/404" replace />;
+    return <Navigate to="/" replace />;
   }
 
   const creatorProducts = products.filter(p => p.creatorId === creator.id);

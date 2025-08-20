@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/digitalden/static/css/main.50f9ebe1.css",
-    "main.js": "/digitalden/static/js/main.edbab09d.js",
+    "main.js": "/digitalden/static/js/main.b61bc93f.js",
     "index.html": "/digitalden/index.html",
     "main.50f9ebe1.css.map": "/digitalden/static/css/main.50f9ebe1.css.map",
-    "main.edbab09d.js.map": "/digitalden/static/js/main.edbab09d.js.map"
+    "main.b61bc93f.js.map": "/digitalden/static/js/main.b61bc93f.js.map"
   },
   "entrypoints": [
     "static/css/main.50f9ebe1.css",
-    "static/js/main.edbab09d.js"
+    "static/js/main.b61bc93f.js"
   ]
 }

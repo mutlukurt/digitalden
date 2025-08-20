@@ -30,7 +30,7 @@ function App() {
   return (
     <ThemeProvider>
       <CartProvider>
-        <Router>
+        <Router basename="/digitalden">
           <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50/30 dark:from-gray-900 dark:via-gray-900 dark:to-blue-900/10">
             <Navbar />
             

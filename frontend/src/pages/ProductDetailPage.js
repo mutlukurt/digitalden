@@ -39,7 +39,7 @@ const ProductDetailPage = () => {
   const product = products.find(p => p.slug === slug);
   
   if (!product) {
-    return <Navigate to="/404" replace />;
+    return <Navigate to="/" replace />;
   }
 
   const creator = creators.find(c => c.id === product.creatorId);
